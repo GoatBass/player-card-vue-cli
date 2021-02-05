@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import PokerGame from './components/pokerGame.vue'
+import PokerGame from './components/PokerGame.vue'
 export default {
   name: 'App',
   components: {

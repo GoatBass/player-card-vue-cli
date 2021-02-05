@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import PokerCard from './pokerCard.vue'
+import PokerCard from './PokerCard.vue'
 
 export default {
     name: 'PokerGame',
