@@ -9,8 +9,16 @@
 
 <script>
 export default {
-  name: "PokerCard",
-  props: ["cardImage", "cardName"],
+  props: {
+    cardImage: {
+      type: String,
+      required: true,
+    },
+    cardName: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
       faceDown: true,
@@ -19,7 +27,8 @@ export default {
   methods: {
     turnCard() {
       this.faceDown = !this.faceDown;
-      console.log("The card shown is: ", this.cardName);
+      //We emit an event, we send the id as information of card we flipped
+      this.$emit('flippedCard', this.$props)
     },
   },
 };
